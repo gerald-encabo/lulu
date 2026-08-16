@@ -7,10 +7,17 @@ interface Props {
   className?: string;
 }
 
-export const Logo = ({children, className}: Props) => {
+export const Logo = ({ children, className }: Props) => {
   return (
     <Link href={"/"}>
-      <h2 className={cn("text-2xl text-darkColor font-black tracking-wider", className)}>{children}</h2>
+      <h2
+        className={cn(
+          "text-2xl text-darkColor font-black tracking-wider",
+          className,
+        )}
+      >
+        {children}
+      </h2>
     </Link>
   );
 };
