@@ -16,6 +16,15 @@ export const headerData = [
   { title: "Gift", href: "/gift" },
 ];
 
+export const productType = [
+  { title: "T-shirt", value: "t-shirt" },
+  { title: "Jacket", value: "jacket" },
+  { title: "Pants", value: "pants" },
+  { title: "Hoodie", value: "hoodie" },
+  { title: "Short", value: "short" },
+  { title: "Skirt", value: "skirt" },
+];
+
 export const socialLink = [
   {
     title: "YouTube",
