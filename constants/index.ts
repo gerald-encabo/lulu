@@ -22,7 +22,6 @@ export const productType = [
   { title: "Pants", value: "pants" },
   { title: "Hoodie", value: "hoodie" },
   { title: "Short", value: "short" },
-  { title: "Skirt", value: "skirt" },
 ];
 
 export const socialLink = [
