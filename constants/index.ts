@@ -51,3 +51,24 @@ export const socialLink = [
     icon: faInstagram,
   },
 ];
+
+export const quickLinksData = [
+  {
+    title: "About Us",
+    href: "/about",
+  },
+  { title: "Contact Us", href: "/contact" },
+  { title: "Terms & Conditions", href: "/terms" },
+  { title: "Privacy Policy", href: "/privacy" },
+  { title: "FAQs", href: "/faqs" },
+];
+
+export const categoriesData = [
+  { title: "Men's Fashion", href: "men" },
+  { title: "Women's Fashion", href: "women" },
+  { title: "Kids corner", href: "kids" },
+  { title: "T-shirt", href: "t-shirt" },
+  { title: "Accessories", href: "accessories" },
+  { title: "Household", href: "household" },
+  { title: "Others", href: "others" },
+];
