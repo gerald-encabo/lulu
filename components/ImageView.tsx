@@ -28,7 +28,7 @@ const ImageView = ({ images = [] }: Props) => {
       <AnimatePresence mode="wait">
         <motion.div
           key={active?._key}
-          className="w-full max-h-[550px] min-h-[450px] border border-darkColor/10 rounded-md group overflow-hidden"
+          className="w-full max-h-product-container-image-max-h min-h-product-container-image-min-h border border-darkColor/10 rounded-md group overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -40,7 +40,7 @@ const ImageView = ({ images = [] }: Props) => {
             width={700}
             height={700}
             priority
-            className="w-full h-96 max-h-[550px] min-h-[500px] object-contain group-hover:scale-110 hoverEffect rounded-md"
+            className="w-full h-96 max-h-product-image-h min-h-product-image-min-h object-contain group-hover:scale-110 hoverEffect rounded-md"
           />
         </motion.div>
       </AnimatePresence>
