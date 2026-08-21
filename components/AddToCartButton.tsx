@@ -5,16 +5,16 @@ import { QuantityButtons } from "./QuantityButtons";
 import { PriceFormatter } from "./PriceFormatter";
 
 interface Props {
-  product?: Product;
+  product: Product;
   className?: string;
 }
 
 export const AddToCartButton = ({ product, className }: Props) => {
   const isOutOfStock = product?.stock === 0;
-  const itemCount = 4;
+  const itemCount = 0;
 
   return (
-    <div>
+    <div className="w-full">
       {itemCount ? (
         <div className="w-full text-sm">
           <div className="flex items-center justify-between">
@@ -32,7 +32,7 @@ export const AddToCartButton = ({ product, className }: Props) => {
         <Button
           disabled={isOutOfStock}
           className={cn(
-            "w-full bg-transparent text-darkColor shadow-none border-darkColor/30 font-semibold tracking-wide hover:text-white hoverEffect",
+            "w-full bg-transparent text-darkColor shadow-none border-darkColor/30 font-semibold tracking-wide hover:text-white hoverEffect rounded-md",
             className,
           )}
         >

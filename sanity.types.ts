@@ -212,3 +212,44 @@ export type AllSanitySchemaTypes =
   | SanityAssetSourceData
   | SanityImageAsset
   | Geopoint;
+
+// Source: sanity/helpers/queries.ts
+// Variable: PRODUCT_BY_SLUG_QUERY
+// Query: *[_type == 'product' && slug.current == $slug] | order(name asc) [0]
+export type PRODUCT_BY_SLUG_QUERY_RESULT = {
+  _id: string;
+  _type: "product";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  slug?: Slug;
+  images?: Array<{
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+    _key: string;
+  }>;
+  intro?: string;
+  description?: string;
+  price?: number;
+  discount?: number;
+  categories?: Array<
+    {
+      _key: string;
+    } & CategoryReference
+  >;
+  stock?: number;
+  status?: "hot" | "new" | "sale";
+  variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "t-shirt";
+} | null;
+
+// Query TypeMap
+import "@sanity/client";
+declare module "@sanity/client" {
+  interface SanityQueries {
+    "*[_type == 'product' && slug.current == $slug] | order(name asc) [0]": PRODUCT_BY_SLUG_QUERY_RESULT;
+  }
+}

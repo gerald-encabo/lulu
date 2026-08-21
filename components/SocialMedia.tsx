@@ -1,4 +1,3 @@
-import React from "react";
 import {
   TooltipProvider,
   Tooltip,
@@ -8,9 +7,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { socialLink } from "@/constants";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 interface Props {
   className?: string;

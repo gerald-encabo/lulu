@@ -1,4 +1,4 @@
-import { MapPin, Phone } from "lucide-react";
+import { Clock10Icon, Mail, MapPin, Phone } from "lucide-react";
 import React from "react";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 const data: Props[] = [
   {
     title: "Visit Us",
-    subtitle: "New Orleans, USA",
+    subtitle: "Vancouver, BC, Canada",
     icon: (
       <MapPin className="text-gray-600 group-hover:text-darkColor transition-colors" />
     ),
@@ -26,14 +26,14 @@ const data: Props[] = [
     title: "Operating Hours",
     subtitle: "Mon - Sun: 10:00 AM to 11:00 PM",
     icon: (
-      <MapPin className="text-gray-600 group-hover:text-darkColor transition-colors" />
+      <Clock10Icon className="text-gray-600 group-hover:text-darkColor transition-colors" />
     ),
   },
   {
     title: "Email Us",
     subtitle: "lulu@gmail.com",
     icon: (
-      <MapPin className="text-gray-600 group-hover:text-darkColor transition-colors" />
+      <Mail className="text-gray-600 group-hover:text-darkColor transition-colors" />
     ),
   },
 ];

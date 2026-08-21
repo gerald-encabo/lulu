@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import React from "react";
 
-export const About = () => {
-  return <Container>About</Container>;
+export const PrivacyPage = () => {
+  return <Container>Privacy Page</Container>;
 };

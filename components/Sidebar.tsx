@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import { motion } from "motion/react";
 import { Logo } from "./Logo";
 import { X } from "lucide-react";

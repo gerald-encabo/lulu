@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { defineQuery } from "next-sanity";
 import { HomeTabbar } from "./HomeTabbar";
 import { productType } from "@/constants";
