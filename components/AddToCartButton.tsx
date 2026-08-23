@@ -32,7 +32,7 @@ export const AddToCartButton = ({ product, className }: Props) => {
         <Button
           disabled={isOutOfStock}
           className={cn(
-            "w-full bg-transparent text-darkColor shadow-none border-darkColor/30 font-semibold tracking-wide hover:text-white hoverEffect rounded-md",
+            "md:w-full w-auto bg-transparent text-darkColor shadow-none border-darkColor/30 font-semibold tracking-wide hover:text-white hoverEffect rounded-md",
             className,
           )}
         >
