@@ -73,6 +73,52 @@ export const categoriesData = [
   { title: "Others", href: "others" },
 ];
 
+export const termsData = [
+  {
+    title: "Acceptance of Terms",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Use of Services",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Intellectual Property",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Limitation of Liability",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Governance Law",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+];
+
+export const privaciesData = [
+  {
+    title: "Information Collection",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Use of Information",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Information Sharing",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Data Security",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+  {
+    title: "Your Rights",
+    info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia hic corporis quam, illo molestias ullam consequatur inventore eaque doloribus laborum.",
+  },
+];
+
 export const faqsData = [
   {
     question: "What is LuLu returns policy?",
