@@ -106,7 +106,7 @@ export const SearchBar = () => {
                         />
                       )}
                     </Link>
-                    <div className="flex flex-row items-center justify-center w-full">
+                    <div className="flex flex-row items-center justify-center w-full overflow-y-auto scrollbar-none">
                       <div className="px-4 py-2 grow">
                         <Link
                           href={`/product/${product?.slug?.current}`}

@@ -72,3 +72,39 @@ export const categoriesData = [
   { title: "Household", href: "household" },
   { title: "Others", href: "others" },
 ];
+
+export const faqsData = [
+  {
+    question: "What is LuLu returns policy?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+  {
+    question: "How do I return my LuLU order?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+  {
+    question: "Can I cancel or change my Lulu order?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+  ,
+  {
+    question: "Do LuLu shoes have a warranty?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+  ,
+  {
+    question: "Can my LuLu order be dispatched internationally?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+  ,
+  {
+    question: "Does LuLu offer product advice?",
+    answer:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dignissimos, iure modi, provident est ab recusandae molestiae natus, ea commodi aut quibusdam doloremque. Pariatur ex reiciendis et!",
+  },
+];
