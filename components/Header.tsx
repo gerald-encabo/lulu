@@ -13,7 +13,7 @@ export const Header = async () => {
   const user = await currentUser();
 
   return (
-    <header className="bg-white border-b border-b-gray-400 py-5">
+    <header className="bg-white border-b border-b-gray-400 py-5 w-full fixed z-50">
       <Container className="flex items-center justify-between gap-7 text-light">
         <HeaderMenu />
         <div className="w-auto md:w-1/3 flex items-center justify-center gap-2.5">
