@@ -9,13 +9,13 @@ export const productType = defineType({
   fields: [
     defineField({
       name: "name",
-      title: "Product",
+      title: "Product Name",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "slug",
-      title: "slug",
+      title: "Slug",
       type: "slug",
       options: {
         source: "name",
@@ -80,7 +80,7 @@ export const productType = defineType({
       type: "string",
       options: {
         list: [
-          { title: "T-shirt", value: "t-shirt" },
+          { title: "Tshirt", value: "tshirt" },
           { title: "Jacket", value: "jacket" },
           { title: "Pants", value: "pants" },
           { title: "Hoodie", value: "hoodie" },

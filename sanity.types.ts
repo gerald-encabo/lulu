@@ -56,7 +56,7 @@ export type Product = {
   >;
   stock?: number;
   status?: "new" | "hot" | "sale";
-  variant?: "t-shirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
+  variant?: "tshirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
 };
 
 export type SanityImageCrop = {
@@ -243,13 +243,35 @@ export type PRODUCT_BY_SLUG_QUERY_RESULT = {
   >;
   stock?: number;
   status?: "hot" | "new" | "sale";
-  variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "t-shirt";
+  variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "tshirt";
 } | null;
+
+// Source: sanity/helpers/queries.ts
+// Variable: CATEGORIES_QUERY
+// Query: *[_type == 'category'] | order(name desc)
+export type CATEGORIES_QUERY_RESULT = Array<{
+  _id: string;
+  _type: "category";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  slug?: Slug;
+  description?: string;
+  image?: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+}>;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == 'product' && slug.current == $slug] | order(name asc) [0]": PRODUCT_BY_SLUG_QUERY_RESULT;
+    "*[_type == 'category'] | order(name desc)": CATEGORIES_QUERY_RESULT;
   }
 }

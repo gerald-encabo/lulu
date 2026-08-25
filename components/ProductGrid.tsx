@@ -5,7 +5,7 @@ import { HomeTabbar } from "./HomeTabbar";
 import { productType } from "@/constants";
 import { client } from "@/sanity/lib/client";
 import { Product } from "@/sanity.types";
-import { NoProductAvailable } from "./NoProductAvailable";
+import { NoProductsAvailable } from "./NoProductsAvailable";
 import { motion, AnimatePresence } from "motion/react";
 import { Loader2 } from "lucide-react";
 import { ProductCard } from "./ProductCard";
@@ -67,7 +67,7 @@ export const ProductGrid = () => {
               ))}
             </div>
           ) : (
-            <NoProductAvailable selectedTab={selectedTab} />
+            <NoProductsAvailable selectedTab={selectedTab} />
           )}
         </>
       )}
