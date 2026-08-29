@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 export const OrderPage = async () => {
-  const user = await requiredUser();
+  // const user = await requiredUser();
 
   return <div>OrderPage</div>;
 };
