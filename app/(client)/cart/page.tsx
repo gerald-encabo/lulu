@@ -22,9 +22,14 @@ import { QuantityButtons } from "@/components/QuantityButtons";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import paypal from "@/images/paypalLogo.png";
+import {
+  createCheckoutSession,
+  Metadata,
+} from "@/actions/createCheckoutSession";
 
 const Cart = () => {
   const [isClient, setIsClient] = useState(false);
+  const [loading, setLoading] = useState(false);
   const { isSignedIn } = useAuth();
   const {
     deleteCartProduct,
@@ -35,7 +40,7 @@ const Cart = () => {
     getGroupedItems,
   } = userCartStore();
 
-  const user = useUser();
+  const { user } = useUser();
 
   useEffect(() => {
     setIsClient(true);
@@ -60,8 +65,24 @@ const Cart = () => {
     }
   };
 
-  const handleCheckout = () => {
-    toast.error("Checkout on process");
+  const handleCheckout = async () => {
+    setLoading(true);
+    try {
+      const metadata: Metadata = {
+        orderNumber: crypto.randomUUID(),
+        customerName: user?.fullName ?? "Unknown",
+        customerEmail: user?.emailAddresses[0]?.emailAddress ?? "Unknown",
+        clerkUserId: user!.id,
+      };
+      const checkoutUrl = await createCheckoutSession(cartProducts, metadata);
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
+      }
+    } catch (error) {
+      console.log("Error creating checkout session: ", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
