@@ -35,7 +35,7 @@ export const getAllCategories = async () => {
     const categories = await sanityFetch({
       query: CATEGORIES_QUERY,
     });
-    
+
     const data = categories?.data;
 
     // Verify data is an actual array before returning
@@ -51,9 +51,6 @@ export const getAllCategories = async () => {
 };
 
 export const getMyOrders = async (userId: string) => {
-  if (!userId) {
-    throw new Error("User ID is required");
-  }
   const MY_ORDERS_QUERY =
     defineQuery(`*[_type == 'order' && clerkUserId == $userId] | order(orderData desc){
     ...,products[]{

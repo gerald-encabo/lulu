@@ -17,11 +17,7 @@ export const Header = async () => {
   const categories = await getAllCategories();
   const { userId } = await auth();
 
-  if (!userId) {
-    return redirect("/");
-  }
-
-  const rawOrders = await getMyOrders(userId);
+  const rawOrders = await getMyOrders(userId ?? "");
   const orders = Array.isArray(rawOrders) ? rawOrders : [];
 
   return (
