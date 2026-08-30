@@ -1,5 +1,4 @@
 import { Clock10Icon, Mail, MapPin, Phone } from "lucide-react";
-import React from "react";
 
 interface Props {
   title: string;

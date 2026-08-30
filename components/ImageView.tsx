@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   SanityImageAssetReference,
   SanityImageCrop,
-  // SanityImageHotspot,
+  SanityImageHotspot,
 } from "../sanity.types";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
@@ -13,7 +13,7 @@ interface Props {
   images?: Array<{
     asset?: SanityImageAssetReference;
     media?: unknown;
-    // hotspot?: SanityImageHotspot;
+    hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     _type: "image";
     _key: string;

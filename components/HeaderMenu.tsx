@@ -6,7 +6,7 @@ import { CATEGORIES_QUERY_RESULT } from "@/sanity.types";
 export const HeaderMenu = ({
   categories,
 }: {
-  categories?: CATEGORIES_QUERY_RESULT;
+  categories: CATEGORIES_QUERY_RESULT;
 }) => {
   const pathname = usePathname();
 
