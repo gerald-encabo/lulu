@@ -93,7 +93,7 @@ export type Product = {
   >;
   stock?: number;
   status?: "new" | "hot" | "sale";
-  variant?: "tshirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
+  variant?: "t-shirt" | "jacket" | "pants" | "hoodie" | "short" | "others";
 };
 
 export type SanityImageCrop = {
@@ -282,7 +282,7 @@ export type PRODUCT_BY_SLUG_QUERY_RESULT = {
   >;
   stock?: number;
   status?: "hot" | "new" | "sale";
-  variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "tshirt";
+  variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "t-shirt";
 } | null;
 
 // Source: sanity/helpers/queries.ts
@@ -355,7 +355,7 @@ export type MY_ORDERS_QUERY_RESULT = Array<{
       >;
       stock?: number;
       status?: "hot" | "new" | "sale";
-      variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "tshirt";
+      variant?: "hoodie" | "jacket" | "others" | "pants" | "short" | "t-shirt";
     } | null;
     quantity?: number;
     _key: string;
