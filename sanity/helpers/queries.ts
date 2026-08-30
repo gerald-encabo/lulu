@@ -1,9 +1,10 @@
 import { defineQuery } from "next-sanity";
 import { sanityFetch } from "../lib/live";
+import { Product } from "@/sanity.types";
 
 export const getProductBySlug = async (slug: string) => {
   const PRODUCT_BY_SLUG_QUERY = defineQuery(
-    `*[_type == 'product' && slug.current == $slug] | order(name asc) [0]`,
+    `*[_type == 'product' && slug.current == $slug] | order(name asc)[0]`,
   );
   try {
     const product = await sanityFetch({
@@ -12,7 +13,15 @@ export const getProductBySlug = async (slug: string) => {
         slug,
       },
     });
-    return product?.data || null;
+
+    const data = product?.data;
+
+    // Check if data exists and contains actual product properties (not an empty object {})
+    if (!data || typeof data !== "object" || !("_id" in data)) {
+      return null;
+    }
+
+    return data as Product;
   } catch (error) {
     console.error("Error fetching product by Slug:", error);
   }
@@ -26,10 +35,17 @@ export const getAllCategories = async () => {
     const categories = await sanityFetch({
       query: CATEGORIES_QUERY,
     });
-    return categories.data || [];
+    
+    const data = categories?.data;
+
+    // Verify data is an actual array before returning
+    if (!Array.isArray(data)) {
+      return [];
+    }
+
+    return data;
   } catch (error) {
     console.error("Error fetching all categories");
-
     return [];
   }
 };

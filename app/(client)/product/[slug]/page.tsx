@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { AddToCartButton } from "@/components/AddToCartButton";
 import { ProductCharacteristics } from "@/components/ProductCharacteristics";
+import { Product } from "@/sanity.types";
 
 const SingleProductPage = async ({
   params,
@@ -19,8 +20,10 @@ const SingleProductPage = async ({
   params: Promise<{ slug: string }>;
 }) => {
   const { slug } = await params;
-  const product = await getProductBySlug(slug);
+  const data = await getProductBySlug(slug);
 
+  const product: Product | null =
+    data && "_id" in data ? (data as Product) : null;
   if (!product) {
     return notFound();
   }
