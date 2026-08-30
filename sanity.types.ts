@@ -254,7 +254,7 @@ export type AllSanitySchemaTypes =
 
 // Source: sanity/helpers/queries.ts
 // Variable: PRODUCT_BY_SLUG_QUERY
-// Query: *[_type == 'product' && slug.current == $slug] | order(name asc) [0]
+// Query: *[_type == 'product' && slug.current == $slug] | order(name asc)[0]
 export type PRODUCT_BY_SLUG_QUERY_RESULT = {
   _id: string;
   _type: "product";
@@ -371,7 +371,7 @@ export type MY_ORDERS_QUERY_RESULT = Array<{
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    "*[_type == 'product' && slug.current == $slug] | order(name asc) [0]": PRODUCT_BY_SLUG_QUERY_RESULT;
+    "*[_type == 'product' && slug.current == $slug] | order(name asc)[0]": PRODUCT_BY_SLUG_QUERY_RESULT;
     '*[_type=="category"] | order(name asc)': CATEGORIES_QUERY_RESULT;
     "*[_type == 'order' && clerkUserId == $userId] | order(orderData desc){\n    ...,products[]{\n      ...,product->\n    }\n  }": MY_ORDERS_QUERY_RESULT;
   }

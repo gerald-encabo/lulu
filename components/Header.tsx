@@ -8,11 +8,21 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded, Show, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ListOrdered } from "lucide-react";
-import { getAllCategories } from "@/sanity/helpers/queries";
+import { getAllCategories, getMyOrders } from "@/sanity/helpers/queries";
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
 export const Header = async () => {
   const user = await currentUser();
   const categories = await getAllCategories();
+  const { userId } = await auth();
+
+  if (!userId) {
+    return redirect("/");
+  }
+
+  const rawOrders = await getMyOrders(userId);
+  const orders = Array.isArray(rawOrders) ? rawOrders : [];
 
   return (
     <header className="bg-white border-b border-b-gray-400 py-5 sticky z-50 top-0">
@@ -39,7 +49,7 @@ export const Header = async () => {
               <Link href={"/orders"} className="group relative">
                 <ListOrdered className="w-5 h-5 group-hover:text-darkColor hoverEffect" />
                 <span className="absolute -top-1 -right-1 bg-darkColor text-white h-3.5 w-3.5 rounded-full text-xs font-semibold flex items-center justify-center">
-                  0
+                  {orders.length ? orders.length : 0}
                 </span>
               </Link>
               <UserButton />
