@@ -5,7 +5,7 @@ import { privaciesData } from "@/constants";
 const Privacy = () => {
   return (
     <Container className="max-w-3xl sm:px-6 lg:px-8 py-12">
-      <Title className="text-3xl font-bold mb-6">Terms and Conditions</Title>
+      <Title className="text-3xl font-bold mb-6">Privacy Policy</Title>
       <div className="space-y-4">
         {privaciesData?.map((privacy, index) => (
           <section key={index}>
