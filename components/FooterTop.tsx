@@ -30,7 +30,7 @@ const data: Props[] = [
   },
   {
     title: "Email Us",
-    subtitle: "lulu@gmail.com",
+    subtitle: "info@lulu.ca",
     icon: (
       <Mail className="text-gray-600 group-hover:text-darkColor transition-colors" />
     ),

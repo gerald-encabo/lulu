@@ -5,8 +5,13 @@ import { SocialMedia } from "./SocialMedia";
 import { Input } from "./ui/input";
 import { categoriesData, quickLinksData } from "@/constants";
 import Link from "next/link";
+import { CATEGORIES_QUERY_RESULT } from "@/sanity.types";
 
-export const Footer = () => {
+export const Footer = ({
+  categories,
+}: {
+  categories: CATEGORIES_QUERY_RESULT;
+}) => {
   return (
     <footer className="bg-white ">
       <Container>
@@ -15,7 +20,8 @@ export const Footer = () => {
           <div className="space-y-4">
             <Logo>LuLu</Logo>
             <p className="text-gray-600 text-sm">
-            LuLu activewear, loungewear and footwear for all the ways you love to move. Sweat, grow & connect in performance apparel.
+              LuLu activewear, loungewear and footwear for all the ways you love
+              to move. Sweat, grow & connect in performance apparel.
             </p>
             <SocialMedia
               className="text-darkColor/60"
@@ -40,13 +46,12 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-darkColor mb-4">Categories</h3>
             <div className="flex flex-col gap-3">
-              {categoriesData?.map((item) => (
+              {categoriesData?.map((category) => (
                 <Link
-                  key={item?.title}
-                  href={`/category/${item?.href}`}
-                  className="hover:text-darkColor text-gray-600 text-sm font-medium hoverEffect"
+                  key={category?.title}
+                  href={`/category/${category?.href}`}                  className="hover:text-darkColor text-gray-600 text-sm font-medium hoverEffect"
                 >
-                  {item?.title}
+                  {category?.title}
                 </Link>
               ))}
             </div>

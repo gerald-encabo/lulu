@@ -9,8 +9,7 @@ import {
 export const headerData = [
   { title: "Home", href: "/" },
   { title: "Men", href: "/men" },
-  { title: "Women", href: "/woman" },
-  { title: "Kids", href: "/kids" },
+  { title: "Women", href: "/women" },
   { title: "New", href: "/new" },
   { title: "Featured", href: "/featured" },
   { title: "Gift", href: "/gift" },
@@ -66,11 +65,7 @@ export const quickLinksData = [
 export const categoriesData = [
   { title: "Men's Fashion", href: "men" },
   { title: "Women's Fashion", href: "women" },
-  { title: "Kids corner", href: "kids" },
-  { title: "T-shirt", href: "t-shirt" },
   { title: "Accessories", href: "accessories" },
-  { title: "Household", href: "household" },
-  { title: "Others", href: "others" },
 ];
 
 export const termsData = [
