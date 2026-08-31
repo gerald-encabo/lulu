@@ -81,6 +81,7 @@ const OrderDetailsDialog = ({ order, isOpen, onClose }: Props) => {
                       width={50}
                       height={50}
                       className="border rounded-sm w-14 h-14 object-contain"
+                      loading="lazy"
                     />
                   )}
                   {product?.product && (

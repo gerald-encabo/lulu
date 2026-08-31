@@ -10,7 +10,6 @@ import Link from "next/link";
 import { ListOrdered } from "lucide-react";
 import { getAllCategories, getMyOrders } from "@/sanity/helpers/queries";
 import { auth } from "@clerk/nextjs/server";
-import { redirect } from "next/navigation";
 
 export const Header = async () => {
   const user = await currentUser();

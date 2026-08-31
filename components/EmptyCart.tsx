@@ -23,6 +23,7 @@ const EmptyCart = () => {
             src={emptyCart}
             alt="emptyCart"
             className="drop-shadow-lg object-contain"
+            loading="lazy"
           />
         </motion.div>
         <motion.div

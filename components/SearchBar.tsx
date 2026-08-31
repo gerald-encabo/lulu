@@ -103,6 +103,7 @@ export const SearchBar = () => {
                           src={urlFor(product?.images[0]).url()}
                           alt="productImage"
                           className="object-cover w-full h-full group-hover:scale-110 hoverEffect"
+                          loading="lazy"
                         />
                       )}
                     </Link>

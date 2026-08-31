@@ -147,6 +147,9 @@
   .hoverEffect {
     @apply transition-all ease-in-out duration-300 cursor-pointer;
   }
+  .capitalize-first-letter::first-letter {
+    text-transform: uppercase;
+  }
 }
 
 /* Our font setup */

@@ -6,7 +6,7 @@ import { useAuth, useUser } from "@clerk/nextjs";
 import { Container } from "@/components/Container";
 import NoAccessToCart from "@/components/NoAccessToCart";
 import EmptyCart from "@/components/EmptyCart";
-import { Heart, ShoppingBag, Trash } from "lucide-react";
+import { Heart, ShoppingBag, Trash, Trash2 } from "lucide-react";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
@@ -180,13 +180,15 @@ const Cart = () => {
                         </div>
                       );
                     })}
-                    <Button
-                      className="m-5 font-semibold"
-                      onClick={handleResetCart}
-                      variant="destructive"
-                    >
-                      Reset Cart
-                    </Button>
+                    <div className="flex items-left justify-items-end">
+                      <Button
+                        className="m-5 font-semibold"
+                        onClick={handleResetCart}
+                      >
+                        <Trash2 />
+                        Clear Cart
+                      </Button>
+                    </div>
                   </div>
                 </div>
                 {/* Order Summary for desktop view */}
@@ -223,7 +225,12 @@ const Cart = () => {
                         href={"/"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
-                        <Image src={paypal} alt="paypalLogo" className="w-20" />
+                        <Image
+                          src={paypal}
+                          alt="paypalLogo"
+                          className="w-20"
+                          loading="lazy"
+                        />
                       </Link>
                     </div>
                   </div>
@@ -262,7 +269,12 @@ const Cart = () => {
                         href={"/"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
-                        <Image src={paypal} alt="paypalLogo" className="w-20" />
+                        <Image
+                          src={paypal}
+                          alt="paypalLogo"
+                          className="w-20"
+                          loading="lazy"
+                        />
                       </Link>
                     </div>
                   </div>

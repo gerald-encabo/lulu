@@ -57,6 +57,7 @@ const ImageView = ({ images = [] }: Props) => {
               width={100}
               height={100}
               className="w-full h-auto object-contain cursor-pointer"
+              loading="lazy"
             />
           </button>
         ))}
