@@ -225,7 +225,7 @@ const Cart = () => {
                         </span>
                       </Button>
                       <Link
-                        href={"/"}
+                        href={"#"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
                         <Image
@@ -272,7 +272,7 @@ const Cart = () => {
                         </span>
                       </Button>
                       <Link
-                        href={"/"}
+                        href={"#"}
                         className="flex items-center justify-center py-2 border border-darkColor/50 rounded-full hover:border-darkColor hover:bg-darkColor/5 hoverEffect"
                       >
                         <Image

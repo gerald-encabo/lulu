@@ -38,8 +38,8 @@ const EmptyCart = () => {
             Your cart is feeling lonely
           </h2>
           <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            molestias pariatur adipisci assumenda magni vero?
+            Looks like you haven't added anything yet. Browse our collection and
+            find something you'll love.
           </p>
         </div>
         <Link
