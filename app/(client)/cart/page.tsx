@@ -215,11 +215,14 @@ const Cart = () => {
                         />
                       </div>
                       <Button
-                        className="w-full rounded-full font-semibold tracking-wide"
+                        className="w-full rounded-full font-semibold tracking-wide bg-stripeBtn hover:bg-stripeBtn/80"
                         size="lg"
                         onClick={handleCheckout}
                       >
-                        Proceed to Checkout
+                        Checkout with{" "}
+                        <span className="font-extrabold text-lg tracking-tight">
+                          Stripe
+                        </span>
                       </Button>
                       <Link
                         href={"/"}
@@ -228,7 +231,7 @@ const Cart = () => {
                         <Image
                           src={paypal}
                           alt="paypalLogo"
-                          className="w-20"
+                          className="w-15"
                           loading="lazy"
                         />
                       </Link>
@@ -259,11 +262,14 @@ const Cart = () => {
                         />
                       </div>
                       <Button
-                        className="w-full rounded-full font-semibold tracking-wide"
+                        className="w-full rounded-full font-semibold tracking-wide bg-stripeBtn hover:bg-stripeBtn/80"
                         size="lg"
                         onClick={handleCheckout}
                       >
-                        Proceed to Checkout
+                        Checkout with{" "}
+                        <span className="font-extrabold text-lg tracking-tight">
+                          Stripe
+                        </span>
                       </Button>
                       <Link
                         href={"/"}
@@ -272,7 +278,7 @@ const Cart = () => {
                         <Image
                           src={paypal}
                           alt="paypalLogo"
-                          className="w-20"
+                          className="w-15"
                           loading="lazy"
                         />
                       </Link>

@@ -5,13 +5,8 @@ import { SocialMedia } from "./SocialMedia";
 import { Input } from "./ui/input";
 import { categoriesData, quickLinksData } from "@/constants";
 import Link from "next/link";
-import { CATEGORIES_QUERY_RESULT } from "@/sanity.types";
 
-export const Footer = ({
-  categories,
-}: {
-  categories: CATEGORIES_QUERY_RESULT;
-}) => {
+export const Footer = () => {
   return (
     <footer className="bg-white ">
       <Container>
@@ -49,7 +44,8 @@ export const Footer = ({
               {categoriesData?.map((category) => (
                 <Link
                   key={category?.title}
-                  href={`/category/${category?.href}`}                  className="hover:text-darkColor text-gray-600 text-sm font-medium hoverEffect"
+                  href={`/category/${category?.href}`}
+                  className="hover:text-darkColor text-gray-600 text-sm font-medium hoverEffect"
                 >
                   {category?.title}
                 </Link>
